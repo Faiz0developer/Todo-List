@@ -2,12 +2,18 @@ import React from "react";
 const ToDo = (props) => {
   return(
     <>
-      <div className="todo_style">
-        <i className="fa fa-times" 
+      <div className="todo_style">        
+        <li> {props.data} </li>
+        <i className="fa-solid fa-edit" 
+        onClick={()=>{
+           props.editItem(props.id);   
+        }}>        
+        </i>
+        <i className="fa-solid fa-trash-can"
         onClick={()=>{
           props.delItem(props.id);
-        }}/>  
-        <li> {props.data} </li>
+        }}> 
+        </i>
       </div>
     </>
   );
