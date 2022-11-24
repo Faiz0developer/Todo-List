@@ -52,7 +52,7 @@ function App() {
   }
 
 
-  // delete the items
+  // delete individual items
    const delList = (i) => {
     setItem( (prev) => {
       return prev.filter( (arr, index) => {
@@ -102,7 +102,7 @@ function App() {
           <ol> 
             {item.map( (itemval, i) => {
               return (
-              <ToDo 
+              <ToDo
                 data={itemval} 
                 key={i}
                 id={i}
